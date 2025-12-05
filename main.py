@@ -1,7 +1,7 @@
 import os
 from twilio.rest import Client
 import requests
-
+from datetime import timedelta,datetime
 
 STOCK = "ITC"
 COMPANY_NAME = "ITC Ltd"
@@ -35,14 +35,16 @@ STOCK_PARAMS = {
 
 
 
-
-
-
+today = datetime.now().date()
+yesterday = today - timedelta(days=1)
+yesterday_str = yesterday.strftime("%Y-%m-%d")
+day_before_yesterday = today - timedelta(days=2)
+day_before_yesterday_str = day_before_yesterday.strftime("%Y-%m-%d")
 response = requests.get(STOCK_API_Endpoint,STOCK_PARAMS)
 data = response.json()
 
-print(data["Time Series (Daily)"]["2025-12-02"]["1. open"])
-print(data["Time Series (Daily)"]["2025-12-03"]["1. open"])
+print(data["Time Series (Daily)"][yesterday_str]["1. open"])
+print(data["Time Series (Daily)"][day_before_yesterday_str]["1. open"])
 
 
 
