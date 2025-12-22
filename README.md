@@ -54,7 +54,12 @@ The goal is not prediction, but **information awareness through automation**.
 ---
 
 ## 📸 Output Preview
-![Picsart_25-12-22_10-23-26-955](https://github.com/user-attachments/assets/ad7de02b-c264-4aa7-8754-55ed34b4c3b1)
+
+<p align="center">
+  <img src="images/output_img-1.png" width="280">
+  <img src="images/output_img-2.png" width="280">
+</p>
+
 
 The email alert includes:
 - Stock movement direction
