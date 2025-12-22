@@ -55,10 +55,19 @@ The goal is not prediction, but **information awareness through automation**.
 
 ## 📸 Output Preview
 
-<p align="center">
-  <img src="images/output_img-1.jpg" width="280">
-  <img src="images/output-img-2.jpg" width="280">
-</p>
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="images/output_img-1.jpg" width="280"><br>
+      <b>Email Alert</b>
+    </td>
+    <td align="center">
+      <img src="images/output-img-2.jpg" width="280"><br>
+      <b>SMS Alert</b>
+    </td>
+  </tr>
+</table>
 
 
 The email alert includes:
