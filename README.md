@@ -1,43 +1,90 @@
-# 📈 Stock News Alert – Day 36 of 100 Days of Code
+# 📈 Stock News Alert
 
-This project automatically checks the stock price of a chosen company and, if there is a significant change in price, it fetches the latest related news articles and sends them as alerts via SMS/email.
+A Python-based automation project that monitors stock price movements and sends relevant news updates via **email alerts**.
 
-I built this as part of the **100 Days of Code (Day 36)** to practice working with **APIs, JSON data, environment variables, and automation**.
-
----
-
-## 🚀 Features
-
-- Monitors daily price change of a selected stock (e.g., TSLA, AAPL, etc.).
-- Uses a stock price API to get recent closing prices.
-- Calculates percentage change between today and yesterday.
-- If the change crosses a defined threshold (e.g., ±5%), it:
-  - Fetches top company-related news headlines.
-  - Sends alerts with headline + brief description via SMS (Twilio) or email.
-- Uses environment variables for API keys and secrets (no hard-coded keys).
-- Can be scheduled to run automatically (e.g., using cron / PythonAnywhere).
+Built as part of **Day 36 of the #100DaysOfCode (Python)** challenge, this project focuses on learning how real-world systems combine **APIs, data processing, and notifications**.
 
 ---
 
-## 🧠 Tech Stack
+## 📌 Project Overview
 
-- **Language:** Python
-- **APIs:** Stock price API, News API (e.g., Alpha Vantage, NewsAPI)
-- **Notifications:** Twilio SMS / email (SMTP)
-- **Environment:** Tested on Linux (WSL / Ubuntu)
-- **Automation (optional):** Cron job / PythonAnywhere
+Stock prices move every day — but understanding *why* they move often requires checking multiple sources.
+
+This project automates that process by:
+- Tracking daily stock price changes
+- Detecting significant movement
+- Fetching related news automatically
+- Sending everything in a clean, readable email
+
+The goal is not prediction, but **information awareness through automation**.
 
 ---
 
-## 📂 Project Structure
+## ✨ Features
 
-```bash
-stock-news-alert/
-│── main.py                  # Main script to run the alert logic
-│── stock_manager.py         # Handles fetching stock data (optional)
-│── news_manager.py          # Handles fetching news data (optional)
-│── notification_manager.py  # Handles sending SMS/email (optional)
-│── .env.example             # Sample environment variables (no real keys)
-│── requirements.txt         # Python dependencies
-│── .gitignore               # Ignore venv, .env, cache files, etc.
-│── README.md                # Project documentation
+- 📊 **Daily Stock Tracking**  
+  Fetches daily closing prices for a given stock symbol
+
+- 📈 **Percentage Change Calculation**  
+  Compares yesterday’s closing price with the previous day
+
+- 📰 **Automatic News Fetching**  
+  Retrieves top related news articles when a threshold is crossed
+
+- 📬 **Email Alerts**  
+  Sends a single, well-formatted email with stock movement and news
+
+- 🔐 **Secure Configuration**  
+  Uses environment variables (`.env`) to protect credentials
+
+- 🐧 **Linux-Friendly Workflow**  
+  Built and tested in a Linux (Ubuntu) environment
+
+---
+
+## 🧠 How It Works
+
+1. Fetch daily stock price data using a stock market API  
+2. Calculate percentage change between the last two trading days  
+3. Check if the change exceeds a defined threshold  
+4. Fetch the top related news articles using a news API  
+5. Format everything into a readable message  
+6. Send the alert via email automatically  
+
+---
+
+## 📸 Output Preview
+![Picsart_25-12-22_10-23-26-955](https://github.com/user-attachments/assets/ad7de02b-c264-4aa7-8754-55ed34b4c3b1)
+
+The email alert includes:
+- Stock movement direction
+- Percentage change
+- Related news headlines and summaries
+
+
+
+## ⚙️ Configuration
+
+You can customize the following values in the code:
+
+- `STOCK_NAME` – Stock symbol to track (e.g., TSLA, AAPL)
+- `COMPANY_NAME` – Company name for news search
+- `THRESHOLD_PERCENT` – Percentage change required to trigger an alert
+
+## ⚠️ Known Limitations
+
+- Depends on free-tier API limits (rate limiting may apply)
+- Market data is based on daily closing prices, not real-time
+- News relevance depends on API search accuracy
+
+## 🔒 Security
+
+- API keys and email credentials are stored in environment variables
+- Sensitive files are excluded using `.gitignore`
+- No credentials are hardcoded in the source code
+
+## 🙌 Acknowledgement
+
+This project was built as part of Day 36 of the *100 Days of Python* course,
+with additional modifications and improvements made during implementation.
+
