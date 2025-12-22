@@ -63,7 +63,7 @@ The goal is not prediction, but **information awareness through automation**.
       <b>Email Alert</b>
     </td>
     <td align="center">
-      <img src="images/output-img-2.jpg" width="280"><br>
+      <img src="images/output_img-2.jpg" width="280"><br>
       <b>SMS Alert</b>
     </td>
   </tr>
