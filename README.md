@@ -57,7 +57,7 @@ The goal is not prediction, but **information awareness through automation**.
 
 <p align="center">
   <img src="images/output_img-1.jpg" width="280">
-  <img src="images/output_img-2.jpg" width="280">
+  <img src="images/output-img-2.jpg" width="280">
 </p>
 
 
